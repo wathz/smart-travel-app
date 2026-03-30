@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="notif-body">
+
+<div class="notif-container">
+
+    <!-- Header -->
+    <div class="notif-header">
+        <a href="/dashboard" class="back">❮</a>
+        <h2>Inbox</h2>
+        <span class="read-all">Read All</span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="active">Notifications <span class="badge">2</span></button>
+        <button>Messages</button>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="notif-card active-card">
+        <div class="icon green">✔</div>
+        <div class="text">
+            <h3>Booking Confirmed!</h3>
+            <p>Your stay has been successfully booked.</p>
+            <span>2m ago</span>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="notif-card active-card">
+        <div class="icon blue">🔔</div>
+        <div class="text">
+            <h3>Trip Reminder</h3>
+            <p>Your trip starts soon.</p>
+            <span>1h ago</span>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="notif-card">
+        <div class="icon orange">🏷</div>
+        <div class="text">
+            <h3>Deal Alert</h3>
+            <p>Flights are discounted.</p>
+            <span>3h ago</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

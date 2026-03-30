@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Travel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="login-body">
+
+<div class="login-container">
+
+    <!-- Back button -->
+    <a href="/onboarding3" class="back">❮</a>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <h2>SmartTravel</h2>
+    </div>
+
+    <h1>Welcome back!</h1>
+    <p class="sub">Sign in to continue your adventures</p>
+
+    <!-- 🔴 ERROR MESSAGE (TOP) -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="error-box">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- FORM -->
+    <form action="/login" method="post">
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="name@example.com" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Your password" required>
+
+        <div class="forgot">
+            <a href="/forgot-password">Forgot Password?</a>
+        </div>
+
+        <!-- ✅ FIXED SUBMIT BUTTON -->
+        <button type="submit" class="btn-primary">Sign In</button>
+
+    </form>
+
+    <!-- ✅ FIXED GUEST BUTTON -->
+    <button type="button" class="guest-btn"
+        onclick="window.location.href='/guest'">
+        Continue as Guest
+    </button>
+
+    <p class="signup">
+        Don't have an account? <a href="/register">Sign Up</a>
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Code</title>
+</head>
+<body>
+
+<h2>Enter Verification Code</h2>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <p style="color:red;">{{ messages[0] }}</p>
+  {% endif %}
+{% endwith %}
+
+<form method="post">
+    <input type="text" name="code" placeholder="6-digit code" required>
+    <button type="submit">Verify</button>
+</form>
+
+</body>
+</html>

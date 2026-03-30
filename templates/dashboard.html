@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>Hello, Traveler!</h1>
+            <p>Where is your next adventure?</p>
+        </div>
+        <a href="/notifications" class="bell-icon">
+            <i class="fa-regular fa-bell"></i>
+        </a>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search destinations...">
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+
+    <div class="cat-item">
+        <div class="cat-icon map">
+            <i class="fa-regular fa-map"></i>
+        </div>
+        <p>Map</p>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-icon budget">
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+        <p>Budget</p>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-icon explore">
+            <i class="fa-solid fa-compass"></i>
+        </div>
+        <p>Explore</p>
+    </div>
+
+    <div class="cat-item">
+        <div class="cat-icon top">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <p>Top Rated</p>
+    </div>
+
+</div>
+
+    <!-- Featured Card -->
+    <div class="featured">
+        <img src="{{ url_for('static', filename='images/Ella1.jpg') }}">
+        <div class="featured-text">
+            <span class="fea">FEATURED</span>
+            <h2>Ella, Sri Lanka</h2>
+            <p>LKR 25,000 - 35,000 · 3 days</p>
+        </div>
+    </div>
+
+    <!-- Suggested -->
+    <div class="section-title">
+        <h2>Suggested for You</h2>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/sigiriya.png') }}">
+            <h3>Sigiriya Rock</h3>
+            <p>Central Province</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/mirissa.jpg') }}">
+            <h3>Mirissa Beach</h3>
+            <p>Southern Province</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <div class="nav-item active"><i class="fa-solid fa-house"></i><p>Home</p></div>
+    <div class="nav-item"><i class="fa-regular fa-compass"></i><p>Explore</p></div>
+    <div class="nav-item"><i class="fa-solid fa-plane"></i><p>Trips</p></div>
+    <div class="nav-item"><i class="fa-regular fa-bookmark"></i><p>Saved</p></div>
+    <div class="nav-item"><i class="fa-regular fa-user"></i><p>Profile</p></div>
+</div>
+
+</body>
+</html>
