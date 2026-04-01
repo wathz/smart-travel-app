@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Trip</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="plan-body">
+
+<!-- TOP IMAGE -->
+<div class="plan-hero">
+    <img src="{{ url_for('static', filename='images/ella.jpg') }}">
+
+    <a href="/dashboard" class="back-btn">❮</a>
+
+    <div class="top-icons">
+        <span>🔖</span>
+        <span>⤴</span>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="plan-card">
+
+    <div class="title-row">
+        <span class="tag">Coastal</span>
+        <span class="rating">⭐ 4.9</span>
+    </div>
+
+    <h1>Santorini Oia Village</h1>
+    <p class="location">📍 Cyclades, Greece</p>
+
+    <!-- COST BOX -->
+    <div class="cost-box">
+        <div>
+            <p class="cost-title">EST. COST</p>
+            <h3>$1,200 - $2,500</h3>
+        </div>
+        <button class="estimate-btn">Estimate</button>
+    </div>
+
+    <!-- TAGS -->
+    <div class="tags">
+        <span>Beach</span>
+        <span>Romantic</span>
+        <span>Scenic</span>
+    </div>
+
+    <!-- ABOUT -->
+    <h2>About</h2>
+    <p class="about-text">
+        Santorini is one of the Cyclades islands in the Aegean Sea. 
+        It was devastated by a volcanic eruption...
+    </p>
+
+    <!-- QUICK INFO -->
+    <h2>Quick Info</h2>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <p>Best Season</p>
+            <h4>Apr - Oct</h4>
+        </div>
+
+        <div class="info-card">
+            <p>Avg. Stay</p>
+            <h4>5-7 days</h4>
+        </div>
+
+        <div class="info-card">
+            <p>Language</p>
+            <h4>Greek</h4>
+        </div>
+
+        <div class="info-card">
+            <p>Currency</p>
+            <h4>Euro (€)</h4>
+        </div>
+    </div>
+
+</div>
+
+<!-- BOTTOM BUTTON -->
+<div class="bottom-bar">
+    <button class="plan-btn">📅 Plan a Trip Here</button>
+</div>
+
+</body>
+</html>
